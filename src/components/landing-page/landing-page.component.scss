@@ -1,0 +1,545 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+header .logo h1 {
+  color: #5b6dfe;
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  font-size: 1rem;
+  color: #000;
+}
+
+.book-now-header {
+  padding: 10px 20px;
+  background-color: #5b6dfe;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Hide Menu Icon initially (desktop) */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px;
+}
+
+/* Side Navigation */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #5b6dfe;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Hero Section */
+.hero {
+  height: 600px;
+  background-image: url("/assets/hero_img.svg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #5b6dfe;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Container for Overview Section */
+.overview-container {
+  background-color: #f4f4f9;
+  padding: 40px 0;
+}
+
+/* Title for the Overview Section */
+.overview-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+/* Container for Overview Section */
+.overview-container {
+  background-color: #f4f4f9;
+  padding: 40px 0;
+}
+
+/* Title for the Overview Section */
+.overview-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+/* Overview Section */
+.overview {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  gap: 20px; /* Gap between the overview boxes */
+}
+
+.overview-box {
+  background: #fff;
+  padding: 15px; /* Adjusted padding to make the boxes smaller */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* Smooth rounded corners */
+  text-align: left; /* Align text to the left */
+  flex: 1; /* Ensure boxes stretch evenly */
+  margin: 0 10px; /* Equal margin around the boxes */
+  /* 300pxax-width: Set maximum width for each box */
+}
+
+.overview-box h3 {
+  font-size: 1.15rem; /* Slightly smaller font size */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.overview-box p {
+  font-size: 0.9rem; /* Slightly smaller font size */
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .overview {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .overview-box {
+    margin-bottom: 20px; /* Add margin between boxes when stacked */
+    max-width: 100%; /* Ensure boxes take full width on small screens */
+  }
+}
+
+/* Rooms Section */
+.rooms {
+  display: flex;
+  justify-content: space-between; /* Spread the rooms equally */
+  padding: 50px;
+  /*background-color: #f4f4f9;*/
+  gap: 20px; /* Add space between the room cards */
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+  color: #000;
+}
+
+.room {
+  background-color: #fff; /* White background for the card */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  padding: 20px; /* Inner padding */
+  text-align: center; /* Center-align the content */
+  flex: 1; /* Make the cards flexible to fit the space */
+  width: 350px;
+  max-height: 500px; /* Maximum width for each room card */
+}
+
+.room img {
+  width: 100%;
+  height: 40%; /* Make the image take up the full width of the card */
+  height: auto; /* Keep the image's aspect ratio */
+  border-radius: 10px; /* Slight rounding for the image corners */
+  margin-bottom: 15px;
+}
+
+.room h3 {
+  font-size: 1.25rem; /* Size of the room title */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.room p {
+  font-size: 0.95rem; /* Size of the room price */
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.room .btn {
+  padding: 10px 20px;
+  background-color: #5b6dfe;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.room .btn:hover {
+  background-color: #4a5bcc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rooms {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .room {
+    max-width: 60%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Coffee Plantation Section */
+.coffee-section {
+  padding: 50px 30px;
+  background-color: #f4f4f9;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+/* Content layout with image and text */
+.coffee-content {
+  display: flex;
+  align-items: center; /* Vertically align the image and text */
+  gap: 30px; /* Add space between the image and text */
+}
+
+.coffee-content img {
+  width: 400px; /* Adjust the image width */
+  height: auto; /* Keep the image aspect ratio */
+  border-radius: 12px; /* Smooth rounded corners */
+}
+
+.coffee-content p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 600px; /* Ensure the text doesn't go too wide */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .coffee-content {
+    flex-direction: column; /* Stack the image and text vertically */
+    text-align: center; /* Center the text */
+  }
+
+  .coffee-content img {
+    width: 100%; /* Make the image full-width on smaller screens */
+  }
+
+  .coffee-content p {
+    max-width: 100%; /* Ensure the text takes full width on smaller screens */
+  }
+}
+
+/* Guest Reviews Section */
+.reviews-section {
+  padding: 50px 30px;
+  background-color: #fff;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #000;
+  padding-left: 30px; /* Ensure the title aligns properly with content */
+}
+
+/* Reviews Container */
+.reviews {
+  display: flex;
+  justify-content: space-between; /* Distribute reviews evenly */
+  gap: 20px; /* Space between review cards */
+}
+
+/* Individual Review Card */
+.review {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow effect */
+  border-radius: 12px; /* Rounded corners */
+  flex: 1; /* Allow reviews to take equal space */
+  max-width: 450px; /* Maximum width for each review */
+  text-align: left; /* Align the text to the left */
+}
+
+.review p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.review p:last-child {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reviews {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review {
+    max-width: 80%;
+    margin-bottom: 20px; /* Add space between stacked reviews */
+  }
+}
+
+/* Local Experiences Section */
+.experiences-section {
+  padding: 50px 30px;
+  background-color: #f4f4f9;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: left; /* Align the title to the left */
+}
+
+/* Experiences Container */
+.experiences {
+  display: flex;
+  justify-content: space-between; /* Spread the experiences evenly */
+  gap: 20px; /* Space between the experience cards */
+}
+
+/* Individual Experience Card */
+.experience {
+  background-color: #fff;
+  border-radius: 12px; /* Rounded corners for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  padding: 20px;
+  text-align: left;
+  flex: 1; /* Allow experiences to take equal space */
+  width: 350px; /* Maximum width for each experience card */
+}
+
+.experience img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for the image */
+  margin-bottom: 15px;
+}
+
+.experience h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.experience p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experiences {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience {
+    max-width: 80%;
+    margin-bottom: 20px; /* Space between stacked cards */
+  }
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 50px 30px;
+  background-color: #f4f4f9;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left; /* Align the title to the left */
+  color: #000;
+}
+
+/* Gallery Images */
+.gallery {
+  display: flex;
+  justify-content: space-between; /* Space between the images */
+  gap: 20px;
+}
+
+.gallery img {
+  width: 32%; /* Ensure images take up equal space */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 12px; /* Rounded corners */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to images */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    width: 100%;
+    margin-bottom: 20px; /* Add space between stacked images */
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #5b6dfe;
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+footer .contact-info p {
+  margin: 5px 0;
+}
+
+.book-now-footer {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #5b6dfe;
+  border-radius: 5px;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+  /* Hide navigation and button on mobile/tablet */
+  nav,
+  .book-now-header {
+    display: none;
+  }
+
+  /* Show the hamburger menu icon */
+  .menu-icon {
+    display: flex;
+  }
+}
